@@ -1,7 +1,7 @@
 {
   "name": "happy-fetch",
   "version": "0.1.1",
-  "description": "A simple wrapper for apollo-fetch to make life a little bit easier.",
+  "description": "A simple GraphQL request client.",
   "main": "index.js",
   "repository": "https://github.com/x0bile/happy-fetch.git",
   "author": "Adam Peryman <adam.peryman@gmail.com>",
@@ -12,11 +12,15 @@
     "build": "babel src -s -d lib --presets @babel/env",
     "test": "echo 'Tests are occuring, yes.'"
   },
-  "dependencies": {},
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "url-regex": "^4.1.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.36",
     "@babel/core": "^7.0.0-beta.36",
     "@babel/node": "^7.0.0-beta.36",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.36",
     "@babel/polyfill": "^7.0.0-beta.36",
     "@babel/preset-env": "^7.0.0-beta.36",
     "babel-eslint": "^8.1.2",
