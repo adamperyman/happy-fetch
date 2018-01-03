@@ -39,7 +39,7 @@ export default class HappyFetch {
     const response = await fetch(url, options)
     const responseJson = await response.json()
 
-    if (!responseJson || !responseJson.ok) {
+    if (!responseJson || responseJson.errors) {
       throw new Error(`HappyFetch failed! Response:\n ${responseJson}`)
     }
 
