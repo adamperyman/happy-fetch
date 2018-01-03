@@ -1,6 +1,6 @@
 {
   "name": "happy-fetch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple wrapper for apollo-fetch to make life a little bit easier.",
   "main": "index.js",
   "repository": "https://github.com/x0bile/happy-fetch.git",
