@@ -1,6 +1,6 @@
 {
   "name": "happy-fetch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple GraphQL request client.",
   "main": "index.js",
   "repository": "https://github.com/x0bile/happy-fetch.git",
