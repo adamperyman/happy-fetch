@@ -15,9 +15,14 @@ const graphqlQuery = `
   }
 }`
 
-const happyFetch = new HappyFetch(<API_URL>)
+try {
+  const happyFetch = new HappyFetch(<API_URL>)
 
-const response = await happyFetch.query(graphqlQuery)
+  const response = await happyFetch.query(graphqlQuery)
 
-// Do stuff with response..
+  // Do stuff with response..
+} catch (error) {
+  // Handle API errors..
+}
+
 ```
