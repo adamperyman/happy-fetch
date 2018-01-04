@@ -1,11 +1,17 @@
 {
   "name": "happy-fetch",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A simple GraphQL request client.",
   "main": "index.js",
   "repository": "https://github.com/x0bile/happy-fetch.git",
   "author": "Adam Peryman <adam.peryman@gmail.com>",
-  "keywords": ["happy", "fetch", "graphql", "simple", "request"],
+  "keywords": [
+    "happy",
+    "fetch",
+    "graphql",
+    "simple",
+    "request"
+  ],
   "license": "MIT",
   "private": false,
   "scripts": {
