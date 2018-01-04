@@ -2,6 +2,8 @@
 
 A simple GraphQL request client.
 
+![](https://media.giphy.com/media/1136UBdSNn6Bu8/giphy.gif)
+
 ## Usage
 
 ```

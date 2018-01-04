@@ -5,7 +5,7 @@ const $apiUrl = Symbol('apiUrl')
 
 const DEFAULT_ROUTE = 'data'
 
-const DEFAULT_FETCH_OPTIONS = {
+const BASE_FETCH_OPTIONS = {
   method: 'POST',
   headers: {
     'Accept': 'application/json',
@@ -13,11 +13,13 @@ const DEFAULT_FETCH_OPTIONS = {
   }
 }
 
-export default class HappyFetch {
-  constructor (apiUrl, options = {}) {
-    options.looseUrl = !!options.looseUrl
+const BASE_OPTIONS = {
+  strictUrlCheck: true
+}
 
-    if (!urlRegex({ exact: !!options.looseUrl }).test(apiUrl)) {
+export default class HappyFetch {
+  constructor (apiUrl, options = BASE_OPTIONS) {
+    if (!urlRegex({ exact: options.strictUrlCheck }).test(apiUrl)) {
       throw new Error(`Failed to parse API URL: ${apiUrl} :(`)
     }
 
@@ -34,13 +36,13 @@ export default class HappyFetch {
 
     const options = Object.assign({
       body: JSON.stringify(payload)
-    }, DEFAULT_FETCH_OPTIONS)
+    }, BASE_FETCH_OPTIONS)
 
     const response = await fetch(url, options)
     const responseJson = await response.json()
 
     if (!responseJson || responseJson.errors) {
-      throw new Error(`HappyFetch failed! Response:\n ${responseJson}`)
+      throw new Error(`HappyFetch failed :( Response:\n ${responseJson}`)
     }
 
     return responseJson.data
