@@ -7,8 +7,7 @@ A simple GraphQL request client.
 ```
 import HappyFetch from 'happy-fetch'
 
-const graphqlQuery = `
-{
+const graphqlQuery = `{
   users {
     _id
     name
