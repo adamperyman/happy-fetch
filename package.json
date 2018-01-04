@@ -5,6 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/x0bile/happy-fetch.git",
   "author": "Adam Peryman <adam.peryman@gmail.com>",
+  "keywords": ["happy", "fetch", "graphql", "simple", "request"],
   "license": "MIT",
   "private": false,
   "scripts": {
