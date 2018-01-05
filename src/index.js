@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch'
-import urlRegex from 'url-regex'
+import happyUrlRegex from 'happy-url-regex'
 
 const $apiUrl = Symbol('apiUrl')
 
@@ -19,7 +19,7 @@ const BASE_OPTIONS = {
 
 export default class HappyFetch {
   constructor (apiUrl, options = BASE_OPTIONS) {
-    if (!urlRegex({ exact: options.strictUrlCheck }).test(apiUrl)) {
+    if (!happyUrlRegex({ exact: options.strictUrlCheck }).test(apiUrl)) {
       throw new Error(`Failed to parse API URL: ${apiUrl} :(`)
     }
 
